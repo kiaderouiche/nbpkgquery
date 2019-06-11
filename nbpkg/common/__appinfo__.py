@@ -27,5 +27,5 @@ __classifiers__=[
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.7',
-        'Topic :: Security',
+        'Topic :: Security'
     ]

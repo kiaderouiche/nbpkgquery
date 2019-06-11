@@ -1,16 +1,14 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
-from os.path import isfile
-import json
-
-if isfile ('README.md'):
-    with open('README.md') as frmd:
-        long_description = frmd.read()
-
 import os.path
 import json
+
+from setuptools import setup, find_packages
+
+if os.path.isfile ('README.md'):
+    with open('README.md') as frmd:
+        long_description = frmd.read()
 
 
 with open(os.path.join("nbpkg", "common", "version.json")) as f:
