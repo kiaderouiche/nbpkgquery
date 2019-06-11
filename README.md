@@ -7,11 +7,11 @@ nbpkgquery is a find and extract information from a NetBSD package and pkgsrc Fr
 
 nbpkgquery provides three features:
 
-1. local search
+1. local search and inspect
 
-2. remote local search
+2. remote local search and inspect
 
-3. web search
+3. web search and inspect
 
 ## Requirements
 
@@ -23,7 +23,6 @@ nbpkgquery provides three features:
 Install from source code
 
     pip install nbpkgquery
-
 
 ##Usage:
 
