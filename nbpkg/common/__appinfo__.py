@@ -1,4 +1,4 @@
-# pdfcct
+# nbpkgquery
 #-*- coding: utf-8 -*-
 # Copyright (c) 2019. K.I.A.Derouiche (Algiers, ALGERIA).
 
@@ -7,16 +7,16 @@
 long_description = """\
 """
 
-__nameapp__ = distname = "checksum-tool"
+__nameapp__ = distname = "nbpkgquery"
 __author__  = "K.I.A.Derouiche"
 __email__   = "kamel.derouiche@gmail.com"
-__descr__   = "Checksum files and directory."
+__descr__   = "nbpkgquery is a find and extract information from a NetBSD package."
 __ldescr__  =  long_description
-__platform__ = ["NetBSD", "Linux", "FreeBSD", "OpenBSD", "DragonFlyBSD"]
-__url__      = "https://github.com/kiaderouiche/checksum-tool"
+__platform__ = ["NetBSD", "Linux", "FreeBSD", "OpenBSD", "DragonFlyBSD", "Windows"]
+__url__      = "https://github.com/kiaderouiche/nbpkgquery"
 __license__  = "MPL-2.0"
 __keywords__ = "checksum, md5, sha-1, sha256"
-__install_requires__ = ["PyQt5"]
+__install_requires__ = ["click"]
 __classifiers__=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

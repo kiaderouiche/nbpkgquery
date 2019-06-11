@@ -3,8 +3,7 @@
 
 from setuptools import setup, find_packages
 from os.path import isfile
-
-version = '0.0.1rc1'
+import json
 
 if isfile ('README.md'):
     with open('README.md') as frmd:
