@@ -15,7 +15,8 @@ nbpkgquery provides three features:
 
 ## Requirements
 
-- Python>= 3.7
+- Python>= 3.8
+- update-checker
 - click
 
 ## Installation
