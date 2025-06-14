@@ -1,0 +1,8 @@
+[Fastly]
+name=Dépôt Fastly
+enabled=1
+autorefresh=1
+baseurl=https://example.com/
+path=/
+type=rpm-md
+keeppackages=0

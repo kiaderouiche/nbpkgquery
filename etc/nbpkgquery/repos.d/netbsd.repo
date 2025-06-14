@@ -1,0 +1,8 @@
+[NetBSD]
+name=Dépôt NetBSD
+enabled=1
+autorefresh=1
+baseurl=https://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/
+path=/
+type=rpm-md
+keeppackages=0

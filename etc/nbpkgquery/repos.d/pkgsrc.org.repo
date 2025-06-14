@@ -1,0 +1,8 @@
+[pkgsrc.org]
+name=Dépôt pkgsrc.org
+enabled=1
+autorefresh=1
+baseurl=https://pkgsrc.org/
+path=/
+type=rpm-md
+keeppackages=0

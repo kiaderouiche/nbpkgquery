@@ -1,0 +1,10 @@
+[Dépôt WIP]
+name=Dépôt WIP
+type=yast
+access=local
+baseurl=
+path=/
+gpgcheck=0
+gpgkey=
+enabled=1
+priority=99

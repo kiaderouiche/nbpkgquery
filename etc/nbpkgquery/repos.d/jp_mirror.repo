@@ -1,0 +1,8 @@
+[JP Mirror]
+name=Dépôt JP Mirror
+enabled=1
+autorefresh=1
+baseurl=http://ftp.jaist.ac.jp/pub/pkgsrc/packages/NetBSD/
+path=/
+type=rpm-md
+keeppackages=0

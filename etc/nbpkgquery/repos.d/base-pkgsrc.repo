@@ -1,0 +1,10 @@
+[Dépôt principal]
+name=Dépôt principal
+type=yast
+access=local
+baseurl=/usr/pkgsrc/
+path=/
+gpgcheck=0
+gpgkey=
+enabled=1
+priority=99
