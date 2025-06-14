@@ -13,12 +13,6 @@ nbpkgquery provides three features:
 
 3. web search and inspect
 
-## Requirements
-
-- Python>= 3.8
-- update-checker
-- click
-
 ## Installation
 
 Install from source code
