@@ -1,0 +1,149 @@
+.\" Manpage pour nbpkgquery, adaptée pour NetBSD
+.Dd April 5, 2025
+.Dt NBPKGQUERY 1
+.Os NetBSD
+.Sh NAME
+.Nm nbpkgquery
+.Nd query NetBSD packages via pkgsrc
+.Sh SYNOPSIS
+.Nm
+.Ar command
+.Op Ar options
+.Sh DESCRIPTION
+.Nm
+is a command-line tool for querying and managing NetBSD packages through the pkgsrc system. It provides subcommands to display package details, check dependencies, export information, and more.
+.Sh COMMANDS
+The following subcommands are available:
+.Bl -tag -width Ds
+.It Cm show Ar package Op Fl -binary
+Display details of a specified package. Use
+.Fl -binary
+to query an installed binary package instead of a source package in
+.Pa /usr/pkgsrc .
+.It Cm search Op Fl M | Fl -maintainer Ar maintainer
+Search for a package or list packages by a given maintainer using
+.Fl -maintainer .
+.It Cm depends Ar package Op Fl -binary
+List dependencies of a package. Use
+.Fl -binary
+for installed binary packages.
+.It Cm clean
+Clean the package cache (currently a simulation).
+.It Cm export Ar package Ar format Ar output Op Fl -binary
+Export package details to a file in
+.Ar format
+(either
+.Cm json
+or
+.Cm csv
+) at
+.Ar output .
+Use
+.Fl -binary
+for binary packages.
+.It Cm whoowns Ar file
+Identify which package owns a given file.
+.It Cm provides Ar package Op Fl -binary
+List files provided by a package. Use
+.Fl -binary
+for binary packages.
+.It Cm revdepends Ar package Op Fl -binary
+List packages that depend on the specified package. Use
+.Fl -binary
+for binary packages.
+.It Cm outdated Op Ar package Op Fl -all
+Show outdated packages. Without
+.Ar package ,
+use
+.Fl -all
+to list all installed packages; otherwise, check the specified
+.Ar package .
+.It Cm verify Ar package
+Verify the integrity of an installed binary package.
+.It Cm size Ar package_file
+Display the size of a binary package file (.tgz or .tbz), local or remote (URL).
+.It Cm history Ar package
+Show the installation or update history of a binary package.
+.It Cm filelist Ar package Op Fl -binary
+List files belonging to a package. Use
+.Fl -binary
+for binary packages.
+.It Cm changelog Ar package
+Show recent changes for a source package.
+.It Cm diff Ar package Ar version1 Ar version2
+Compare two versions of a package (not yet implemented).
+.It Cm web-search Ar package Op Fl -source Cm pkgsrc.se | NetBSD
+Search for a package online via a specified source (default:
+.Cm pkgsrc.se ).
+Not yet implemented.
+.It Cm sigcheck Ar package
+Verify signatures of an installed binary package.
+.It Cm notify Cm enable | disable
+Enable or disable update notifications.
+.It Cm check-updates
+Check for available package updates (currently a simulation).
+.It Cm about
+Display information about the tool (not yet implemented).
+.It Cm version
+Display the version of
+.Nm
+(not yet implemented).
+.El
+.Sh OPTIONS
+.Bl -tag -width Ds
+.It Fl h , Fl -help
+Show help for the tool or a specific subcommand.
+.El
+.Sh EXAMPLES
+Display details of a source package:
+.Pp
+.Dl nbpkgquery show gedit
+.Pp
+Show the size of a .tgz file:
+.Pp
+.Dl nbpkgquery size /path/to/0verkill-0.16nb1.tgz
+.Pp
+Export package details to JSON:
+.Pp
+.Dl nbpkgquery export gedit json gedit.json
+.Pp
+List dependencies of a binary package:
+.Pp
+.Dl nbpkgquery depends firefox --binary
+.Pp
+Search packages by maintainer:
+.Pp
+.Dl nbpkgquery search --maintainer "user@example.com"
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /usr/pkgsrc
+Default directory for source packages.
+.It Pa /etc/mk.conf
+Configuration file to customize
+.Ev PKGSRCDIR .
+.El
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.It Ev PKGSRCDIR
+Specifies the pkgsrc directory (default:
+.Pa /usr/pkgsrc ).
+.El
+.Sh DIAGNOSTICS
+Errors are displayed in red in the terminal, typically with an explanatory message (e.g., "Package not found").
+.Sh SEE ALSO
+.Xr pkg_info 1 ,
+.Xr pkg_admin 1 ,
+.Xr pkgsrc 7
+.Sh HISTORY
+.Nm
+was first introduced in April 2025.
+.Sh AUTHORS
+Written by [your name or pseudonym, if desired].
+.Sh BUGS
+Report bugs to [your contact or repository, if applicable]. Some features (e.g.,
+.Cm diff ,
+.Cm web-search ,
+.Cm about ,
+and
+.Cm version )
+are not yet implemented.
